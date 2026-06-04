@@ -1,0 +1,81 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 350px;
+    margin: 60px auto;
+    padding: 25px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* INPUTS */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* BUTTONS (FIXED TEXT VISIBILITY) */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;              /* FIX */
+    font-weight: bold;         /* FIX */
+    font-size: 14px;
+}
+
+/* START BUTTON */
+.start-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+/* STOP BUTTON */
+.stop-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* DEFAULT BUTTON (like vote/login) */
+button:not(.start-btn):not(.stop-btn) {
+    background-color: #007bff;
+}
+
+/* HOVER EFFECT */
+button:hover {
+    opacity: 0.85;
+}
+
+/* STATUS COLORS */
+.green {
+    color: #00ff88;
+    font-weight: bold;
+}
+.red {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* DELETE LINK */
+.delete {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* LINKS */
+a {
+    color: #00c6ff;
+    text-decoration: none;
+}
