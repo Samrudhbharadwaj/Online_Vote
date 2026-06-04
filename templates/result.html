@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<div class="container">
+<h2>Results</h2>
+
+{% for c in candidates %}
+<p>{{c[1]}} - Votes: {{c[2]}}</p>
+{% endfor %}
+
+<a href="/logout"><button>Logout</button></a>
+</div>

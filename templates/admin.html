@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<div class="container">
+<h2>Admin Panel</h2>
+
+<p>Status: 
+<span class="{{ 'green' if status=='started' else 'red' }}">
+{{status}}
+</span>
+</p>
+
+<!-- FIXED BUTTON (no anchor issue) -->
+<form action="/toggle">
+<button class="{{ 'stop-btn' if status=='started' else 'start-btn' }}">
+{{ 'Stop Election' if status=='started' else 'Start Election' }}
+</button>
+</form>
+
+<h3>Add Candidate</h3>
+<form method="post">
+<input name="name" placeholder="Candidate Name" required>
+<button>Add</button>
+</form>
+
+<h3>Candidates</h3>
+{% for c in candidates %}
+<p>
+{{c[1]}} - Votes: {{c[2]}}
+<a href="/delete/{{c[0]}}" class="delete">Delete</a>
+</p>
+{% endfor %}
+
+<br>
+<a href="/logout"><button>Logout</button></a>
+</div>

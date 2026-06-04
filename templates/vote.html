@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<h2 style="text-align:center;">Vote Now</h2>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:center;">
+{% for c in candidates %}
+<div class="container" style="width:200px;">
+<h3>{{c[1]}}</h3>
+<a href="/cast_vote/{{c[0]}}">
+<button>Vote</button>
+</a>
+</div>
+{% endfor %}
+</div>
