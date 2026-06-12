@@ -1,4 +1,4 @@
 flask
 flask_bcrypt
-sqlite3
+db-sqlite3
 flask_login
